@@ -1,6 +1,7 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
+import path from 'node:path';
 
 export default defineConfig({
   server: {
@@ -16,6 +17,7 @@ export default defineConfig({
             remote2: 'remote2@http://localhost:3002/mf-manifest.json',
           },
           shared: ['react', 'react-dom'],
+          runtimePlugins: [path.join(__dirname, "./src/runtime-plugin/retry.ts")],
         }),
       ]);
     },
