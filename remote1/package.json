@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@module-federation/retry-plugin": "^0.18.1",
+    "@module-federation/rsbuild-plugin": "^0.18.1",
     "@rsbuild/core": "1.4.15",
     "@rsbuild/plugin-react": "1.3.5",
     "@types/react": "18.3.3",
